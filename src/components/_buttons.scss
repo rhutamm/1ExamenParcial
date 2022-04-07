@@ -1,0 +1,23 @@
+.btn-galeria{
+    grid-area: encabezado;
+    color: $colorText;
+    padding-top: 2rem;
+    font-family: $generalFont;
+    font-size: 1.3rem;
+
+    &:hover{
+        color: rgb(137, 12, 151);
+    }
+}
+#boton{
+    padding:0.2rem;
+    font-family: $generalFont;
+    margin: 1rem;
+    text-align: center;
+    transition: all 150ms ease-in-out;
+
+    &:hover{
+        background-color: pink;
+        border-color: white;
+    }
+}

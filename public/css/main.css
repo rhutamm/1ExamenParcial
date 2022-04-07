@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
 #banner img, #galeria figure {
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 #banner img:hover, #galeria figure:hover {
-  -webkit-filter: contrast(40%);
-          filter: contrast(40%);
+  -webkit-filter: grayscale(60%);
+          filter: grayscale(60%);
 }
 
 .texto {
@@ -16,10 +16,24 @@
   text-align: justify;
 }
 
+.contList {
+  padding: 1rem;
+}
+
+.contList h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+}
+
+.contList a {
+  font-family: "Oswald", sans-serif;
+}
+
 #banner {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: banner;
+  padding-top: 4rem;
 }
 
 #banner img {
@@ -46,7 +60,7 @@
      object-fit: cover;
 }
 
-#form {
+#formulario {
   grid-area: form;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +77,7 @@
           align-items: center;
 }
 
-#form .PForm {
+#formulario .PForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,6 +90,49 @@
           justify-content: spece-evenly;
   padding: 1rem;
   width: 60%;
+}
+
+#formulario .PForm input {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  padding: 0.3rem;
+  width: 50%;
+  font-size: 1.1rem;
+}
+
+#formulario textarea {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  width: 60%;
+  color: #0d0d0c;
+}
+
+.btn-galeria {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: encabezado;
+  color: #0d0d0c;
+  padding-top: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3rem;
+}
+
+.btn-galeria:hover {
+  color: #890c97;
+}
+
+#boton {
+  padding: 0.2rem;
+  font-family: "Oswald", sans-serif;
+  margin: 1rem;
+  text-align: center;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+#boton:hover {
+  background-color: pink;
+  border-color: white;
 }
 
 * {
@@ -91,7 +148,7 @@ body {
   grid-auto-flow: dense;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
-      grid-template-areas: "encabezado infoTres" "infoUno banner" "menuCont galeria" "infoDos formulario";
+      grid-template-areas: "encabezado banner" "infoUno infoTres" "menuCont galeria" "infoDos formulario";
 }
 
 #encabezado {
@@ -173,7 +230,7 @@ body {
 }
 
 #infoTres {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: infoTres;
   display: -webkit-box;
@@ -189,7 +246,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem;
+  padding: 0.5rem;
   color: #0d0d0c;
 }
 
@@ -247,7 +304,7 @@ body {
 }
 
 #banner {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: banner;
 }
@@ -265,7 +322,7 @@ body {
 }
 
 #infoTres {
-  -ms-grid-row: 1;
+  -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: infoTres;
 }
@@ -280,13 +337,5 @@ body {
   -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: formulario;
-}
-
-.back-area {
-  background: #e9e9a9;
-}
-
-.back-area {
-  background: #e29ca8;
 }
 /*# sourceMappingURL=main.css.map */

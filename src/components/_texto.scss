@@ -3,3 +3,15 @@
     padding: 1rem;
     text-align: justify;
 }
+.contList{
+    padding: 1rem;
+
+    h3{
+        font-family: $generalFont;
+        font-weight: bold;
+    }
+
+    a{
+        font-family: $generalFont;
+    }
+}

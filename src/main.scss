@@ -3,9 +3,9 @@
 @import "components/texto";
 @import "components/fotos";
 @import "components/form";
+@import "components/buttons";
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
-@import "./fontawesome/scss/fontawesome.scss";
 
 *{
    margin: 0px;  
@@ -17,8 +17,8 @@ body{
     display: grid;
     grid-auto-flow: dense;
     grid-template-columns: 50% 50%;
-    grid-template-areas:  "encabezado infoTres"
-                          "infoUno banner"
+    grid-template-areas:  "encabezado banner"
+                          "infoUno infoTres"
                           "menuCont galeria"
                           "infoDos formulario";
 }
@@ -44,6 +44,7 @@ body{
     }
 }
 
+
 #infoDos{
     grid-area: infoDos;
     @include setFlex(column, center);
@@ -59,7 +60,7 @@ body{
 #infoTres{
     grid-area: infoTres;
     @include setFlex(column, center);
-    padding: 2rem;
+    padding: 0.5rem;
     color: $colorText;
 
     h1{
@@ -116,12 +117,4 @@ body{
 }
 #formulario{
     grid-area: formulario;
-}
-
-.back{
-    @each $area, $color in $background{
-        &-#{area}{
-            background: $color;
-        }
     }
-}
