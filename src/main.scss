@@ -1,0 +1,126 @@
+@import "config/generales";
+@import "config/variables";
+@import "components/texto";
+@import "components/fotos";
+@import "components/form";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+
+*{
+   margin: 0px;  
+   padding: 0px;
+   list-style: none;
+   text-decoration: none;
+}
+body{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:  "encabezado infoTres"
+                          "infoUno banner"
+                          "menuCont galeria"
+                          "infoDos formulario";
+}
+#encabezado{
+    grid-area: encabezado;
+    @include setFlex(column, center);
+    padding: 2rem;
+    color: $colorText;
+    
+    h1{
+        font-family: $headerFont
+    }
+}
+#menuCont{
+    grid-area: menuCont;
+    @include setFlex(column, center);
+    padding: 2rem;
+    color: $colorText;
+
+    h1{
+        font-family: $generalFont;
+        font-weight: bold;
+    }
+}
+
+#infoDos{
+    grid-area: infoDos;
+    @include setFlex(column, center);
+    padding: 2rem;
+    color: $colorText;
+
+    h1{
+        font-family: $generalFont;
+        font-weight: bold;
+        padding: 1rem;
+    }
+}
+#infoTres{
+    grid-area: infoTres;
+    @include setFlex(column, center);
+    padding: 2rem;
+    color: $colorText;
+
+    h1{
+        font-family: $generalFont;
+        font-weight: bold;
+        padding: 1rem;
+    }
+}
+#infoUno{
+    grid-area: infoUno;
+    @include setFlex(column, center);
+    padding: 2rem;
+    color: $colorText;
+
+    h1{
+        font-family: $generalFont;
+        font-weight: bold;
+        padding: 1rem;
+    }
+}
+@media all and (max-width:700px){
+    body{
+        grid-template-columns: 100%;
+        grid-template-areas:  "encabezado" 
+                                "banner"
+                                "infoUno" 
+                                "infoTres"
+                                "menuCont" 
+                                "galeria"
+                                "infoDos" 
+                                "formulario";
+    }
+}
+#galeria{
+    grid-area: galeria;
+}
+#encabezado{
+    grid-area: encabezado;
+}
+#banner{
+    grid-area: banner;
+}
+#infoUno{
+    grid-area: infoUno;
+}
+#infoDos{
+    grid-area: infoDos;
+}
+#infoTres{
+    grid-area: infoTres;
+}
+#menuCont{
+    grid-area: menuCont;
+}
+#formulario{
+    grid-area: formulario;
+}
+
+.back{
+    @each $area, $color in $background{
+        &-#{area}{
+            background: $color;
+        }
+    }
+}

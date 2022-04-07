@@ -1,0 +1,25 @@
+#banner{
+    grid-area: banner;
+
+    img{
+        @extend %effect;
+        width: 100%;
+    }
+}
+#galeria{
+    display: grid;
+    gap:0.5rem;
+    padding: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+
+    figure{
+        @extend %effect;
+        width: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

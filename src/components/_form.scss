@@ -1,0 +1,10 @@
+#form{
+    grid-area: form;
+    @include setFlex(column, center);
+
+    .PForm{
+        @include setFlex (row, spece-evenly);
+        padding: 1rem;
+        width: 60%;
+    }
+}

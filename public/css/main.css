@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap");
+#banner img, #galeria figure {
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+#banner img:hover, #galeria figure:hover {
+  -webkit-filter: contrast(40%);
+          filter: contrast(40%);
+}
+
+.texto {
+  font-family: "Oswald", sans-serif;
+  padding: 1rem;
+  text-align: justify;
+}
+
+#banner {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: banner;
+}
+
+#banner img {
+  width: 100%;
+}
+
+#galeria {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+#galeria figure {
+  width: 100%;
+}
+
+#galeria figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#form {
+  grid-area: form;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form .PForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: spece-evenly;
+      -ms-flex-pack: spece-evenly;
+          justify-content: spece-evenly;
+  padding: 1rem;
+  width: 60%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: dense;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "encabezado infoTres" "infoUno banner" "menuCont galeria" "infoDos formulario";
+}
+
+#encabezado {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: encabezado;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  color: #0d0d0c;
+}
+
+#encabezado h1 {
+  font-family: "Homemade Apple", cursive;
+}
+
+#menuCont {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: menuCont;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  color: #0d0d0c;
+}
+
+#menuCont h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+}
+
+#infoDos {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: infoDos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  color: #0d0d0c;
+}
+
+#infoDos h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+#infoTres {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: infoTres;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  color: #0d0d0c;
+}
+
+#infoTres h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+#infoUno {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: infoUno;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  color: #0d0d0c;
+}
+
+#infoUno h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+@media all and (max-width: 700px) {
+  body {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+        grid-template-areas: "encabezado"  "banner" "infoUno"  "infoTres" "menuCont"  "galeria" "infoDos"  "formulario";
+  }
+}
+
+#galeria {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: galeria;
+}
+
+#encabezado {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: encabezado;
+}
+
+#banner {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: banner;
+}
+
+#infoUno {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: infoUno;
+}
+
+#infoDos {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: infoDos;
+}
+
+#infoTres {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: infoTres;
+}
+
+#menuCont {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: menuCont;
+}
+
+#formulario {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: formulario;
+}
+
+.back-area {
+  background: #e9e9a9;
+}
+
+.back-area {
+  background: #e29ca8;
+}
+/*# sourceMappingURL=main.css.map */
